@@ -43,21 +43,21 @@ This helps:
 ```bash
 pip install -r requirements.txt
 
-**2. Run the extractor for a subject**
+### 2. Run the extractor for a subject
 
 python main.py --subject=ancient_history
 You can replace ancient_history with economics, math, or physics.
 
-3. Output
+### 3. Output
 A CSV file output_concepts.csv will be created in the root folder containing extracted concepts.
 
-🧪 Simulated LLM Prompts & Output
+## 🧪 Simulated LLM Prompts & Output
 Though actual LLM API calls are disabled (to avoid cost), we simulated results using a manual prompt format:
 
-📋 Prompt Format:
+## 📋 Prompt Format:
 Given the question: "<question text>", identify the historical concept(s) this question is based on.
 
-✅ Example Questions & Concepts
+## ✅ Example Questions & Concepts
 Question	Extracted Concepts
 Which of the following was a feature of the Harappan civilization?	Harappan Civilization; Urban Planning
 Ghatikas were institutions associated with...?	Temple Education; Ancient Learning
@@ -65,10 +65,10 @@ Ganeshwar is known for...?	Chalcolithic Sites; Copper Artifacts
 Sine of angle known in 5th century?	History of Indian Mathematics; Trigonometry
 Money Multiplier is influenced by...?	Monetary Policy; Fractional Reserve Banking
 
-🤖 Future Integration with LLMs
+## 🤖 Future Integration with LLMs
 You can easily integrate a real LLM (e.g., OpenAI or Claude) by modifying the extract_concepts function in llm_api.py:
 
-# llm_api.py
+### llm_api.py
 def extract_concepts(question):
     # Future API integration
     response = openai.ChatCompletion.create(

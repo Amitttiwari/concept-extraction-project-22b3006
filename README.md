@@ -42,16 +42,17 @@ This helps:
 ### 1. Install dependencies
 ```bash
 pip install -r requirements.txt
-
-### 2. Run the extractor for a subject
-
+```
+2. Run the extractor for a subject
+```
 python main.py --subject=ancient_history
 You can replace ancient_history with economics, math, or physics.
-
-### 3. Output
+```
+3. Output
+```
 A CSV file output_concepts.csv will be created in the root folder containing extracted concepts.
-
-## 🧪 Simulated LLM Prompts & Output
+```
+🧪 Simulated LLM Prompts & Output
 Though actual LLM API calls are disabled (to avoid cost), we simulated results using a manual prompt format:
 
 ## 📋 Prompt Format:
@@ -69,6 +70,7 @@ Money Multiplier is influenced by...?	Monetary Policy; Fractional Reserve Bankin
 You can easily integrate a real LLM (e.g., OpenAI or Claude) by modifying the extract_concepts function in llm_api.py:
 
 ### llm_api.py
+```
 def extract_concepts(question):
     # Future API integration
     response = openai.ChatCompletion.create(
